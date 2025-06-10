@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envio de Vistorias - MSE</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #d60000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    header img {
+      max-height: 60px;
+    }
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+    h2 {
+      color: #d60000;
+      text-align: center;
+    }
+    h3 {
+      margin-top: 30px;
+      color: #d60000;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    .suite-label {
+      color: #d60000;
+      font-style: italic;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 4px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="file"] {
+      padding: 5px;
+    }
+    button {
+      background-color: #d60000;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button:hover {
+      background-color: #a90000;
+    }
+    .comodo {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .grupo-quartos {
+      margin-top: 30px;
+      padding: 15px;
+      background: #f1f1f1;
+      border-radius: 8px;
+    }
+    .grupo-quartos h4 {
+      margin: 0 0 10px 0;
+      color: #444;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>MSE Engenharia</h1>
+  </header>
+  <main>
+    <h2>Formulário de Vistoria</h2>
+    <form id="formulario-vistoria">
+      <label>Nome:<input type="text" name="nome" required></label>
+      <label>E-mail:<input type="email" name="email" required></label>
+      <label>Nome da Obra:<input type="text" name="obra" required></label>
+      <label>Setor:<input type="text" name="setor" required></label>
+      <label>Endereço do Imóvel:<input type="text" name="endereco" required></label>
+      <label>Observações:<textarea name="obs"></textarea></label>
+
+      <h3>Envio de Fotos por Ambiente</h3>
+      <div class="comodo">
+        <label>Porta de Entrada: <input type="file" name="Porta de Entrada" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_porta"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Sala de Estar: <input type="file" name="Sala de Estar" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_sala"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Cozinha: <input type="file" name="Cozinha" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_cozinha"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Lavanderia: <input type="file" name="Lavanderia" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_lavanderia"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Banheiro 1: <input type="file" name="Banheiro 1" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_banheiro1"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Banheiro 2: <input type="file" name="Banheiro 2" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_banheiro2"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Banheiro 3: <input type="file" name="Banheiro 3" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_banheiro3"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Quintal: <input type="file" name="Quintal" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_quintal"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Garagem: <input type="file" name="Garagem" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_garagem"></textarea></label>
+      </div>
+      <div class="comodo">
+        <label>Fachada / Frente: <input type="file" name="Frente" accept="image/*"></label>
+        <label>Observação:<textarea name="obs_frente"></textarea></label>
+      </div>
+
+      <div class="grupo-quartos">
+        <h4>Quartos e Suítes</h4>
+        <div class="comodo">
+          <label>Quarto 1: <input type="file" name="Quarto 1" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_quarto1"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label class="suite-label">Suíte 1: <input type="file" name="Suíte 1" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_suite1"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label>Quarto 2: <input type="file" name="Quarto 2" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_quarto2"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label class="suite-label">Suíte 2: <input type="file" name="Suíte 2" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_suite2"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label>Quarto 3: <input type="file" name="Quarto 3" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_quarto3"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label class="suite-label">Suíte 3: <input type="file" name="Suíte 3" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_suite3"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label>Quarto 4: <input type="file" name="Quarto 4" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_quarto4"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label class="suite-label">Suíte 4: <input type="file" name="Suíte 4" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_suite4"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label>Quarto 5: <input type="file" name="Quarto 5" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_quarto5"></textarea></label>
+        </div>
+        <div class="comodo">
+          <label class="suite-label">Suíte 5: <input type="file" name="Suíte 5" accept="image/*"></label>
+          <label>Observação:<textarea name="obs_suite5"></textarea></label>
+        </div>
+      </div>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+</body>
+</html>
